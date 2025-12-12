@@ -1,0 +1,8 @@
+{
+    "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+        "back_default": "...",
+        "front_shiny": "...",
+        "back_shiny": "..."
+    }
+}
