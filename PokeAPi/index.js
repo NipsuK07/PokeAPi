@@ -1,4 +1,4 @@
-fetch("https://pokeapi.co/api/v2/pokemon/dragonite")
+fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`)
     .then(responce => responce.json())
     .then(data => {
         // console.log(data.name, " ID: ", data.id, " Korkeus: ", data.height, " Paino: ", data.weight);
@@ -7,15 +7,16 @@ fetch("https://pokeapi.co/api/v2/pokemon/dragonite")
         document.getElementById("PokemonName").innerText = capitalizeFirstLetter(data.name);
         const pokemonName = data.name
         const displayName = pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
-        console.log(data)
-        console.log(data.name);
-        
+        searchInput.value = pokemonName;
+
         function capitalizeFirstLetter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
         function spaceBetweenWords(string) {
             return string.replace(/-/g, ' ');
         }
+
+    
 
         document.getElementById("PokemonID").innerText = "ID: " + data.id;
 

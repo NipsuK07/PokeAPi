@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>List of pokemon names:</h1>
+
+
+    <script>
+        fetch('./pokemon.json')
+            .then(res =>res.json())
+            .then(data => {
+                data.array.forEach(post => {
+                    listEl.insertAdjacentHTML('beforeend', `<li>${post.title}</li>`);
+                    
+                });
+                console.log(data);
+            })
+    </script>
+</body>
+
+</html>
